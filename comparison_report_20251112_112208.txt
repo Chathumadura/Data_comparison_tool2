@@ -1,0 +1,104 @@
+DataComPy Comparison
+-------------------
+
+DataFrame Summary
+-----------------
+
+DataFrame  Columns  Rows
+------------------------
+df1             157  1929
+df2              17  1905
+
+
+Column Summary
+--------------
+
+Number of columns in common: 3
+Number of columns in df1 but not in df2: 154
+Number of columns in df2 but not in df1: 14
+
+Row Summary
+-----------
+
+Matched on: streettwo
+Any duplicates on match values: Yes
+Default Absolute Tolerance: 0.0
+Default Relative Tolerance: 0.0
+Number of rows in common: 1,898
+Number of rows in df1 but not in df2: 31
+Number of rows in df2 but not in df1: 7
+
+Number of rows with some compared columns unequal: 601
+Number of rows with all compared columns equal: 1,297
+
+Column Comparison
+-----------------
+
+Number of columns compared with some values unequal: 2
+Number of columns compared with all values equal: 1
+Total number of values which compare unequal: 636
+
+Columns with Unequal Values or Types
+------------------------------------
+
+Column               df1 dtype       df2 dtype        # Unequal   Max Diff  # Null Diff    Rel Tol    Abs Tol
+-------------------- --------------- --------------- ---------- ---------- ------------ ---------- ----------
+streetone            object          object                 191     0.0000            0     0.0000     0.0000
+village              object          object                 445     0.0000            0     0.0000     0.0000
+
+
+Sample Rows with Unequal Values
+-------------------------------
+
+  streettwo       streetone (df1)    streetone (df2)
+0                        Ambewela                   
+1                                        Pussellawa.
+2                                  Fetteresso Estate
+3                                     Welkule Estate
+4                                         Pundaluoya
+5                     Nuwaraeliya     Deyagama Bazar
+6                           Galle                   
+7            Habarakada, Tawalama                   
+8                                     Aislaby Estate
+9   Pasgoda       Panakaduwa West          Urubokka.
+
+                           streettwo village (df1) village (df2)
+0                        Parakaduwa.     Paluwatta              
+1                      Deraniyagala.      Yatiwala              
+2                           Dumbara.       Dumbara              
+3  3rd Mile Post, Hemmathagama Road,    Ambuluwawa              
+4                            Lindula   Talawakelle              
+5                          Mathugama     Banangala              
+6                          Kotagala.      Kotagala              
+7                   Thawalama South,     Thawalama              
+8                           Hewaheta  Rahathungoda              
+9                             Noori.    Dodhawatte              
+
+
+
+Sample Rows Only in df1 (First 10 Columns)
+------------------------------------------
+
+  factoryid manufacturerid regseq regprefix   regno factory                         name                      streetone        streettwo              address3
+0      1743         1012.0               BF   188.0  BF0188               Kalubowitiyana                 Kalubowitiyana                                       
+1      1825         1099.0               MF  1595.0  MF1595                       Ranaya                    Attampitiya                                       
+2      2978         2252.0               MF  1606.0  MF1606                     Maleesha                      Omaththa,    Agalawaththa.                      
+3      2963         2237.0               HT    61.0  HT0061             Rasenro Handmade                    Minimaruwa,      Alawathura,     Bulathkohupitiya.
+4      2976         2250.0               HT    73.0  HT0073         Sirikandura Handmade                       Unit 02,  Aluthhena Road,   Sirikandura Estate,
+5      1581          850.0               BF    26.0  BF0026                      Majesty  No: 29 F,Waththahena Village,         Atabage,            Delpitiya.
+6      2962         2236.0               HT    60.0  HT0060     Elegance Velvet Handmade                    Panvilahena    Batewalakada,         Agalawaththa.
+7      1695          964.0               BF   140.0  BF0140                Kunduppakanda                    Angulugaha,           Galle.                      
+8      2955         2229.0               HT    43.0  HT0043             Mabulla Handmade                  No : 829/1 D,       Gamunu Mw,    Athurugiriya Road,
+9      2973         2247.0               HT    70.0  HT0070  Serene Tea Gardens Handmade                       No : 67,   Gonamaldeniya,  Kiriporuwa, Erepola,
+
+Sample Rows Only in df2 (First 10 Columns)
+------------------------------------------
+
+     id houseno              streetone      streettwo village city_id district_id division_id gndivision_id tinsdivision_id
+0  1404                    Keembiella,     Baddegama.                         5.0        11.0           0.0                
+1  1590                    Wanduramba.          Galle                         5.0        61.0           0.0                
+2  1581                      No 150/9,  Gampola Road,                        10.0        87.0           0.0                
+3   790          Strathedan Tea Estate         Hatton                        38.0       209.0           0.0                
+4   160             Pussatenne Estate,   Lagumdeniya,                        10.0       129.0           0.0                
+5  1170                 Baddegama Raod        Lelwala                         5.0        11.0           0.0                
+6  1507                     Vijayagama        Pasgoda                        15.0        69.0           0.0

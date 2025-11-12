@@ -3,9 +3,6 @@ from dotenv import load_dotenv
 import os
 # from langchain_experimental.agents import create_pandas_dataframe_agent
 # from langchain_openai import ChatOpenAI
-import matplotlib
-
-matplotlib.use(backend="TkAgg")
 
 load_dotenv()
 

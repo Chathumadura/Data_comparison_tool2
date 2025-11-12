@@ -1,6 +1,7 @@
 # home.py
 import streamlit as st
 import pandas as pd
+import os
 
 
 def page_home():
@@ -37,14 +38,21 @@ def page_home():
 
     # Example: Displaying a CSV file using pandas
     try:
-        csv_data = pd.read_csv(
-            r"./data/Anime_Analysis.csv"
-        )  # Replace "example.csv" with your CSV file
+        # Get the directory of the current file, go up to CSVDash, then to data
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        csv_path = os.path.join(current_dir, "..", "..", "data", "Anime_Analysis.csv")
+        csv_path = os.path.normpath(csv_path)
+        
+        if os.path.exists(csv_path):
+            csv_data = pd.read_csv(csv_path)
+            st.write("### Example CSV Data:")
+            st.dataframe(csv_data.head())
+        else:
+            st.write("### Example CSV Data:")
+            st.write("Sample CSV file not found. Please upload a CSV file to view data.")
+    except Exception as e:
         st.write("### Example CSV Data:")
-        st.dataframe(csv_data.head())
-    except FileNotFoundError:
-        st.write("### Example CSV Data:")
-        st.write("Sample CSV file not found. Please upload a CSV file to view data.")
+        st.write(f"Error loading sample CSV: {str(e)}. Please upload a CSV file to view data.")
 
     # Add any other sections or features as needed
 
