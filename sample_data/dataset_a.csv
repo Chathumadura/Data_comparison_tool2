@@ -1,0 +1,4 @@
+record_id,name,division,status,amount
+1001,Alice,IT,Active,1250.00
+1002,Bob,Finance,Active,980.00
+1003,Cara,Admin,Inactive,760.00
